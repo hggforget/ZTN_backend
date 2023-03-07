@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+    <table>
+       {% for sdp in Sdps %}
+           <tr>
+           <td>{{ sdp.sdpid }}</td>
+           <td>{{ sdp.valid }}</td>
+           <td>{{ sdp.type }}</td>
+           <td>{{ sdp.country }}</td>
+           <td>{{ sdp.state }}</td>
+           </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
