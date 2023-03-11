@@ -19,5 +19,9 @@ from sdpmanager_backend import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('test/',views.test)
+    path('test/',views.test),
+    path('queryComponents/',views.queryComponents),
+    path('RegSdp/',views.RegSdp),
+    path('DelSdp/',views.DelSdp),
+    path('EditSdp/',views.EditSdp)
     ]
