@@ -10,7 +10,7 @@ import time
 from sdpmanager_backend.utils.db_relate import relate_create
 
 
-def test(request):
+def querySdps(request):
     context={}
     sdps=models.Sdpid.objects.all()
     sdp_list=list()
@@ -96,3 +96,6 @@ def EditSdp(request):
     ret=sdp.save()
     print(ret)
     return HttpResponse('received')
+
+
+

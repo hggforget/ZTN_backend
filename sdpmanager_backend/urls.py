@@ -15,13 +15,22 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+
+import log_manager
 from sdpmanager_backend import views
+from log_manager import views as lviews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('querySdps/', views.querySdps),
     path('test/',views.test),
-    path('queryComponents/',views.queryComponents),
-    path('RegSdp/',views.RegSdp),
-    path('DelSdp/',views.DelSdp),
-    path('EditSdp/',views.EditSdp)
+    path('queryComponents/', views.queryComponents),
+    path('RegSdp/', views.RegSdp),
+    path('DelSdp/', views.DelSdp),
+    path('EditSdp/', views.EditSdp),
+    path('LogConnection/',views.LogConnection),
+
+    path('queryLogs/', lviews.queryLogs),
     ]
+
+
